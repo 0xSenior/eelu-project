@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>اختر طبيبك - كير</title>
+    <title>اختر طبيبك</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <nav>
         <div class="container nav-content">
@@ -194,7 +196,8 @@
                     <span class="modal-spec" id="modalSpec"></span>
                     <p id="modalBio"></p>
                     <div style="display: flex; gap: 15px;">
-                        <a href="booking.html" class="btn-primary glow" style="padding: 12px 30px; border-radius: 12px; font-weight: 700;">احجز موعداً الآن</a>
+                        <a href="booking.html" class="btn-primary glow"
+                            style="padding: 12px 30px; border-radius: 12px; font-weight: 700;">احجز موعداً الآن</a>
                         <div class="status-indicator" id="modalStatus">
                             <span></span>
                             <div class="dot"></div>
@@ -213,11 +216,11 @@
 
             const cards = document.querySelectorAll('.doctor-card-h');
             const grid = document.getElementById('doctorGrid');
-            
+
             // Add fade-out effect to the grid
             grid.style.opacity = '0';
             grid.style.transform = 'translateY(10px)';
-            
+
             setTimeout(() => {
                 cards.forEach(card => {
                     const cardCat = card.getAttribute('data-category');
@@ -227,7 +230,7 @@
                         card.style.display = 'none';
                     }
                 });
-                
+
                 // Fade back in
                 grid.style.opacity = '1';
                 grid.style.transform = 'translateY(0)';
@@ -245,7 +248,7 @@
             document.getElementById('modalSpec').innerText = spec;
             document.getElementById('modalImg').src = img;
             document.getElementById('modalBio').innerText = `الدكتور ${name} هو أحد أفضل المتخصصين في ${spec} لدينا، مع خبرة واسعة في تقديم أرقى سبل الرعاية الصحية. يكرس وقته لمساعدة المرضى وضمان حصولهم على أفضل خطة علاجية ممكنة.`;
-            
+
             const modalStatus = document.getElementById('modalStatus');
             modalStatus.className = 'status-indicator ' + statusClass;
             modalStatus.querySelector('span').innerText = statusText;
@@ -258,7 +261,7 @@
         }
 
         // Close on overlay click
-        window.onclick = function(event) {
+        window.onclick = function (event) {
             const modal = document.getElementById('doctorModal');
             if (event.target == modal) {
                 closeModal();
@@ -273,4 +276,5 @@
         </div>
     </footer>
 </body>
+
 </html>
