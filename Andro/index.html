@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>اختر طبيبك</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +15,7 @@
 </head>
 
 <body>
+    <!-- Andro -->
     <nav>
         <div class="logo">
             <span>
@@ -64,6 +65,250 @@
 
 
     </section>
+    <!-- Ahmad harby -->
+    <header class="container page-header">
+        <h1>اختر الطبيب</h1>
+        <p>فلترة حسب التخصص، حالة التوفر، تقييمات المرضى، وأقرب موعد متاح</p>
+    </header>
+
+    <div class="container">
+        <div class="filter-container">
+            <button class="filter-chip active" onclick="filterDoctors('الكل', this)">الكل</button>
+            <button class="filter-chip" onclick="filterDoctors('طب القلب', this)">طب القلب</button>
+            <button class="filter-chip" onclick="filterDoctors('جراحة عامة', this)">جراحة عامة</button>
+            <button class="filter-chip" onclick="filterDoctors('طب الأطفال', this)">طب الأطفال</button>
+            <button class="filter-chip" onclick="filterDoctors('طب العيون', this)">طب العيون</button>
+            <button class="filter-chip" onclick="filterDoctors('طب الأسنان', this)">طب الأسنان</button>
+            <button class="filter-chip" onclick="filterDoctors('طب الجلدية', this)">طب الجلدية</button>
+        </div>
+
+        <div class="doctor-grid" id="doctorGrid">
+            <!-- ----------------------------------------------------------------------------------------- -->
+            <div class="doctor-card-h" onclick="openDoctorDetails(this)" data-category="جراحة عامة">
+                <div class="card-top">
+                    <div class="doctor-info">
+                        <h3>د. محمد علي</h3>
+                        <div class="specialty">جراحة عامة</div>
+                        <div class="exp">+10 سنوات خبرة</div>
+                    </div>
+                    <img src="assets/doctor.png" alt="Doctor" class="doctor-thumb">
+                </div>
+                <div class="card-bottom">
+                    <div class="rating">
+                        <span>4.7</span>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="status-indicator status-busy">
+                        <span>مشغول</span>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ----------------------------------------------------------------------------------------- -->
+            <div class="doctor-card-h" onclick="openDoctorDetails(this)" data-category="طب الأطفال">
+                <div class="card-top">
+                    <div class="doctor-info">
+                        <h3>د. فاطمة محمد</h3>
+                        <div class="specialty">طب الأطفال</div>
+                        <div class="exp">+12 سنة خبرة</div>
+                    </div>
+                    <img src="assets/doctor_f1.png" alt="Doctor" class="doctor-thumb">
+                </div>
+                <div class="card-bottom">
+                    <div class="rating">
+                        <span>4.8</span>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="status-indicator status-available">
+                        <span>متاح</span>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ------------------------------------------------------------------------------------- -->
+            <div class="doctor-card-h" onclick="openDoctorDetails(this)" data-category="طب القلب">
+                <div class="card-top">
+                    <div class="doctor-info">
+                        <h3>د. أحمد السيد</h3>
+                        <div class="specialty">طب القلب</div>
+                        <div class="exp">+15 سنة خبرة</div>
+                    </div>
+                    <img src="assets/doctor_m2.png" alt="Doctor" class="doctor-thumb">
+                </div>
+                <div class="card-bottom">
+                    <div class="rating">
+                        <span>4.9</span>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="status-indicator status-available">
+                        <span>متاح</span>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ------------------------------------------------------------------------------------- -->
+            <div class="doctor-card-h" onclick="openDoctorDetails(this)" data-category="طب الجلدية">
+                <div class="card-top">
+                    <div class="doctor-info">
+                        <h3>د. نور الدين</h3>
+                        <div class="specialty">طب الجلدية</div>
+                        <div class="exp">+8 سنوات خبرة</div>
+                    </div>
+                    <img src="assets/doctor.png" alt="Doctor" class="doctor-thumb" style="filter: hue-rotate(45deg);">
+                </div>
+                <div class="card-bottom">
+                    <div class="rating">
+                        <span>4.8</span>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="status-indicator status-available">
+                        <span>متاح</span>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ------------------------------------------------------------------------------------- -->
+            <div class="doctor-card-h" onclick="openDoctorDetails(this)" data-category="طب الأسنان">
+                <div class="card-top">
+                    <div class="doctor-info">
+                        <h3>د. خالد حسن</h3>
+                        <div class="specialty">طب الأسنان</div>
+                        <div class="exp">+11 سنة خبرة</div>
+                    </div>
+                    <img src="assets/doctor_m2.png" alt="Doctor" class="doctor-thumb" style="filter: brightness(1.2);">
+                </div>
+                <div class="card-bottom">
+                    <div class="rating">
+                        <span>4.6</span>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="status-indicator status-offline">
+                        <span>غير متصل</span>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ------------------------------------------------------------------------------------- -->
+            <div class="doctor-card-h" onclick="openDoctorDetails(this)" data-category="طب العيون">
+                <div class="card-top">
+                    <div class="doctor-info">
+                        <h3>د. سارة عبدالله</h3>
+                        <div class="specialty">طب العيون</div>
+                        <div class="exp">+9 سنوات خبرة</div>
+                    </div>
+                    <img src="assets/doctor_f1.png" alt="Doctor" class="doctor-thumb" style="filter: saturate(1.5);">
+                </div>
+                <div class="card-bottom">
+                    <div class="rating">
+                        <span>4.9</span>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="status-indicator status-available">
+                        <span>متاح</span>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <!-- --------------------------------------------------------------------=======---------------- -->
+
+    <!-- Doctor Detail Modal -->
+    <div class="modal-overlay" id="doctorModal">
+        <div class="modal-content">
+            <div class="close-btn" onclick="closeModal()">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="modal-body">
+                <img src="" alt="Doctor" class="modal-img" id="modalImg">
+                <div class="modal-info">
+                    <h2 id="modalName"></h2>
+                    <span class="modal-spec" id="modalSpec"></span>
+                    <p id="modalBio"></p>
+                    <div style="display: flex; gap: 15px;">
+                        <a href="booking.html" class="btn-primary glow"
+                            style="padding: 12px 30px; border-radius: 12px; font-weight: 700;">احجز موعداً الآن</a>
+                        <div class="status-indicator" id="modalStatus">
+                            <span></span>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function filterDoctors(category, btn) {
+            // Update active button
+            document.querySelectorAll('.filter-chip').forEach(chip => chip.classList.remove('active'));
+            btn.classList.add('active');
+
+            const cards = document.querySelectorAll('.doctor-card-h');
+            const grid = document.getElementById('doctorGrid');
+
+            // Add fade-out effect to the grid
+            grid.style.opacity = '0';
+            grid.style.transform = 'translateY(10px)';
+
+
+            setTimeout(() => {
+                cards.forEach(card => {
+                    const cardCat = card.getAttribute('data-category');
+                    if (category === 'الكل' || cardCat === category) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                // Fade in
+                grid.style.opacity = '1';
+                grid.style.transform = 'translateY(0)';
+            }, 300);
+        }
+
+        function openDoctorDetails(card) {
+            const name = card.querySelector('h3').innerText;
+            const spec = card.querySelector('.specialty').innerText;
+            const img = card.querySelector('.doctor-thumb').src;
+            const statusText = card.querySelector('.status-indicator span').innerText;
+            const statusClass = card.querySelector('.status-indicator').classList.item(1);
+
+            document.getElementById('modalName').innerText = name;
+            document.getElementById('modalSpec').innerText = spec;
+            document.getElementById('modalImg').src = img;
+            document.getElementById('modalBio').innerText = `الدكتور ${name} هو أحد أفضل المتخصصين في ${spec} لدينا، مع خبرة واسعة في تقديم أرقى سبل الرعاية الصحية. يكرس وقته لمساعدة المرضى وضمان حصولهم على أفضل خطة علاجية ممكنة.`;
+
+            const modalStatus = document.getElementById('modalStatus');
+            modalStatus.className = 'status-indicator ' + statusClass;
+            modalStatus.querySelector('span').innerText = statusText;
+
+            document.getElementById('doctorModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('doctorModal').style.display = 'none';
+        }
+
+        // Close on overlay click
+        window.onclick = function (event) {
+            const modal = document.getElementById('doctorModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+
+
+    <!-- Adro -->
     <section id="part">
         <h2>متابعة المواعيد والملف الشخصي</h2>
         <p class="parag">لوحة بسيطة تعرض الموعد القادم، قائمة الانتظار، معلومات المريض، والمدفوعات الأخيرة.</p>
@@ -110,6 +355,12 @@
             </div>
         </div>
     </section>
+    <footer>
+
+        <div class="container">
+            <p>جميع الحقوق محفوظة &copy; 2024 منصة كير الطبية</p>
+        </div>
+    </footer>
 </body>
 
 </html>

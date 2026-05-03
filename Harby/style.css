@@ -1,28 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap');
 
-:root {
-    --bg-dark: #0B111D;
-    --card-bg: #111827;
-    --primary: #38BDF8;
-    --primary-hover: #7DD3FC;
-    --text-white: #FFFFFF;
-    --text-gray: #94A3B8;
-    --border: #1F2937;
-    --success: #10B981;
-    --warning: #F59E0B;
-    --font-main: 'IBM Plex Sans Arabic', sans-serif;
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: var(--font-main);
+    font-family:'IBM Plex Sans Arabic', sans-serif ;
 }
 
 body {
-    background-color: var(--bg-dark);
-    color: var(--text-white);
+    background-color: #0B111D;
+    color: #FFFFFF;
     direction: rtl;
     line-height: 1.6;
     overflow-x: hidden;
@@ -60,95 +47,7 @@ button {
     padding: 0 20px;
 }
 
-/* Navigation */
-nav {
-    position: sticky;
-    top: 0;
-    background: rgba(11, 17, 29, 0.8);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
-    z-index: 1000;
-    padding: 1rem 0;
-}
 
-.nav-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-links {
-    display: flex;
-    gap: 2rem;
-}
-
-.nav-links a {
-    position: relative;
-    transition: color 0.3s;
-}
-
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    width: 0;
-    height: 2px;
-    background: var(--primary);
-    transition: width 0.3s ease, left 0.3s ease;
-    transform: translateX(-50%);
-}
-
-.nav-links a:hover::after,
-.nav-links a.active::after {
-    width: 100%;
-    left: 50%;
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-    color: var(--primary);
-}
-
-.nav-links a.active {
-    text-shadow: 0 2px 4px rgba(56, 189, 248, 0.6);
-}
-
-.user-profile {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 6px 16px;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 100px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    transition: 0.3s;
-    cursor: pointer;
-}
-
-.user-profile:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: var(--primary);
-}
-
-.avatar {
-    width: 34px;
-    height: 34px;
-    background: var(--primary);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 0.9rem;
-    color: var(--bg-dark);
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
-}
-
-/* Buttons */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -164,26 +63,25 @@ nav {
 }
 
 .btn-primary {
-    background: var(--primary);
-    color: var(--bg-dark);
+    background:  #38BDF8;
+    color:#0B111D;
     box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3);
 }
 
 .btn-secondary {
     background: transparent;
-    border: 1px solid var(--border);
-    color: var(--text-white);
+    border: 1px solid #1F2937;
+    color: #FFFFFF;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Page Header */
 .page-header {
     text-align: center;
     padding: 60px 0;
 }
 
 .page-header .category-label {
-    color: var(--primary);
+    color:#38BDF8;
     font-weight: 700;
     margin-bottom: 10px;
     display: block;
@@ -196,13 +94,12 @@ nav {
 }
 
 .page-header p {
-    color: var(--text-gray);
+    color: #94A3B8;
     font-size: 1.1rem;
     max-width: 600px;
     margin: 0 auto;
 }
 
-/* Filter Chips */
 .filter-container {
     display: flex;
     justify-content: center;
@@ -215,27 +112,26 @@ nav {
     padding: 10px 28px;
     border-radius: 100px;
     background: #111827;
-    border: 1px solid var(--border);
-    color: var(--text-gray);
+    border: 1px solid #1F2937;
+    color:  #94A3B8;
     font-size: 1rem;
     cursor: pointer;
     transition: 0.3s;
 }
 
 .filter-chip.active {
-    background: var(--primary);
-    color: var(--bg-dark);
-    border-color: var(--primary);
+    background: #38BDF8;
+    color: #0B111D;
+    border-color:#38BDF8;
     font-weight: 700;
     box-shadow: 0 4px 12px rgba(56, 189, 248, 0.4);
 }
 
 .filter-chip:hover:not(.active) {
     background: rgba(255, 255, 255, 0.05);
-    border-color: var(--text-gray);
+    border-color: #94A3B8;
 }
 
-/* Grid */
 .doctor-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -244,10 +140,9 @@ nav {
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* Horizontal Doctor Card */
 .doctor-card-h {
     background: #111827;
-    border: 1px solid var(--border);
+    border: 1px solid #1F2937;
     border-radius: 24px;
     padding: 24px;
     display: flex;
@@ -259,7 +154,7 @@ nav {
 
 .doctor-card-h:hover,
 .doctor-card-h.active {
-    border-color: var(--primary);
+    border-color: #38BDF8;
     box-shadow: 0 0 20px rgba(56, 189, 248, 0.1);
 }
 
@@ -280,13 +175,13 @@ nav {
 }
 
 .doctor-info .specialty {
-    color: var(--text-gray);
+    color:  #94A3B8;
     font-size: 1rem;
     margin-bottom: 4px;
 }
 
 .doctor-info .exp {
-    color: var(--text-gray);
+    color:  #94A3B8;
     font-size: 0.9rem;
 }
 
@@ -358,12 +253,11 @@ nav {
 
 footer {
     padding: 60px 0;
-    border-top: 1px solid var(--border);
+    border-top: 1px solid #1F2937;
     text-align: center;
-    color: var(--text-gray);
+    color:  #94A3B8;
 }
 
-/* Doctor Detail Modal */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -407,13 +301,13 @@ footer {
     top: 25px;
     left: 25px;
     font-size: 1.5rem;
-    color: var(--text-gray);
+    color:  #94A3B8;
     cursor: pointer;
     transition: 0.3s;
 }
 
 .close-btn:hover {
-    color: var(--primary);
+    color: #38BDF8;
 }
 
 .modal-body {
@@ -435,7 +329,7 @@ footer {
 }
 
 .modal-info .modal-spec {
-    color: var(--primary);
+    color: #38BDF8;
     font-weight: 700;
     font-size: 1.2rem;
     margin-bottom: 20px;
@@ -443,29 +337,8 @@ footer {
 }
 
 .modal-info p {
-    color: var(--text-gray);
+    color:  #94A3B8;
     margin-bottom: 30px;
     line-height: 1.8;
 }
 
-@media (max-width: 768px) {
-    .modal-body {
-        grid-template-columns: 1fr;
-    }
-
-    .modal-img {
-        height: 250px;
-    }
-}
-
-/* Responsive */
-
-@media (max-width: 768px) {
-    .page-header h1 {
-        font-size: 2.5rem;
-    }
-
-    .doctor-grid {
-        grid-template-columns: 1fr;
-    }
-}
