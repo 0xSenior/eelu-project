@@ -1,12 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Readex+Pro:wght@160..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A illo consequatur dolore iusto eos, libero ipsa culpa in iure, id vero tempora, molestias sed et beatae eveniet iste. Enim, necessitatibus!</p>
+    <nav>
+        <div class="logo">
+            <span>
+                A
+            </span>
+            <button><img src="unnamed (3).png" alt="" style="width: 27px; height: 27px;"></button>
+        </div>
+
+        <ul>
+            <li>
+                <a href="#">الرئسية</a>
+            </li>
+            <li>
+                <a href="#">عن العيادة</a>
+            </li>
+            <li>
+                <a href="#">الاطباء</a>
+            </li>
+            <li>
+                <a href="#">الخدمات</a>
+            </li>
+            <li>
+                <a href="#">حجز موعد</a>
+            </li>
+            <li>
+                <a href="#part">لوحة المريض</a>
+            </li>
+        </ul>
+
+    </nav>
+    <section class="first">
+        <div class="content">
+            <h1>مرحبا , احمد</h1>
+            <p>احجز موعدك, تابع دورك, ادفع بامان, وتواصل مع اطباء موثوقين من مكان <br> واحد بتجربة واضحة وسهلة لاي
+                مستخدم عادي.</p>
+            <button class="btn1">احجز موعدك الان</button>
+            <button class="btn2">استعرض الاطباء</button>
+        </div>
+
+        <div class="img-wrapper">
+            <div style="width: 100%; height: 100%;" data-us-project="0QvRKfD69ZQst6LcF3GG">
+                <script
+                    type="text/javascript">!function () { var u = window.UnicornStudio; if (u && u.init) { if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded", function () { u.init() }) } else { u.init() } } else { window.UnicornStudio = { isInitialized: !1 }; var i = document.createElement("script"); i.src = "https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v2.1.11/dist/unicornStudio.umd.js", i.onload = function () { if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded", function () { UnicornStudio.init() }) } else { UnicornStudio.init() } }, (document.head || document.body).appendChild(i) } }();</script>
+            </div>
+            <div class="hider"></div>
+        </div>
+
+
+    </section>
+    <section id="part">
+        <h2>متابعة المواعيد والملف الشخصي</h2>
+        <p class="parag">لوحة بسيطة تعرض الموعد القادم، قائمة الانتظار، معلومات المريض، والمدفوعات الأخيرة.</p>
+
+        <div class="flex">
+            <div class="prson">
+                <h3>الملف الشخصي</h3>
+                <div class="prson-info">
+                    <p class="name">محمد عبدالرحمن</p>
+                    <p class="id">رقم الملف: P-20418</p>
+                    <p class="payment">آخر دفع: 253 ريال</p>
+                </div>
+                <button>تعديل البيانات</button>
+            </div>
+
+            <div class="wait">
+                <div class="wait-header">
+                    <p>رقمك في الانتظار</p>
+                    <span class="number">18</span>
+                </div>
+                <h3>د. فاطمة محمد - طب الأطفال</h3>
+                <div class="progress-container">
+                    <div class="progress-bar"></div>
+                </div>
+                <p class="progress-text">67% مكتمل</p>
+            </div>
+
+            <div class="activ">
+                <div class="icon-box"><i class="fas fa-shield-alt"></i></div>
+                <h3>نشط</h3>
+                <p>حالة الموعد</p>
+            </div>
+
+            <div class="afterp">
+                <div class="icon-box"><i class="fas fa-user-friends"></i></div>
+                <p class="val">6</p>
+                <p>أشخاص قبلك</p>
+            </div>
+
+            <div class="time">
+                <div class="icon-box"><i class="fas fa-clock"></i></div>
+                <p class="val">25 دقيقة</p>
+                <p>الوقت المتوقع</p>
+            </div>
+        </div>
+    </section>
 </body>
+
 </html>
